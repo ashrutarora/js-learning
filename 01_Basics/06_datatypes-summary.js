@@ -50,3 +50,9 @@ const myFunc = function () {
   console.log("Hello from myFunc");
 };
 
+// ********************* MEMORY TYPES *********************
+
+// Stack and Heap memory
+
+// Stack (Primitive Data Types) - We get a call by value
+// Heap (Non-Primitive Data Types) - We get call by reference
