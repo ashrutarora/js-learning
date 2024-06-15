@@ -1,6 +1,6 @@
 // Objects can be declared in 2 ways
 // As a Literal -> const jsUser = {}
-// As a Constructor -> Object.create()
+// As a Constructor -> new Object()
 
 // Singleton - If we make an object using Constructor then it becomes a Singleton object, but not when made with Literals
 
