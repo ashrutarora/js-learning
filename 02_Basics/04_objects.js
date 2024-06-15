@@ -75,3 +75,20 @@ console.log(Object.entries(tinderUser));
 // To check if Properties exist or not
 console.log(tinderUser.hasOwnProperty("isLogged"));
 console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+// ************************** Destructuring **************************
+
+// Destructuring Objects --> Using {}
+console.log("\n\n\n\n");
+const course = {
+  courseName: "JavaScript",
+  price: "999",
+  courseInstructor: "Ashrut"
+}
+// (course.courseInstructor) --> Not used much to make the code cleaner
+
+// We are calling courseInstructor as instructor from now on
+const {courseInstructor: instructor} = course
+console.log(instructor);
+
+
