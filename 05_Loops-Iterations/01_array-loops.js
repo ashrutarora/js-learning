@@ -4,7 +4,7 @@
 // --> ["", "", ""]
 // --> [{}, {}, {}]
 
-const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 for (const num of arr) {
   console.log(num);
@@ -54,7 +54,7 @@ for (const key in arr) {
   console.log(arr[key]);
 }
 
-// for each (mostly used)
+// for each (mostly used) --> Doesent return any value
 
 const coding = ["js", "ruby", "java", "python", "arr"];
 
