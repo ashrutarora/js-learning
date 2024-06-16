@@ -37,3 +37,26 @@ function loginMessage(username = "King Jenga") {
 console.log(loginMessage("Ashrut"));
 console.log(loginMessage(""));
 console.log(loginMessage()); // Undefined
+
+console.log("\n\n\n");
+
+// REST OPERATOR --> When we dont know the number of Arguments in function
+
+function calcCartPrice(...num1) {
+  return num1;
+}
+
+console.log(calcCartPrice(200, 400, 500));
+
+
+const user = {
+    username: "Ashrut",
+    price: 199
+}
+
+function handleObject(anyObject){
+
+    console.log(`Username is ${anyObject.username}\nPrice is ${anyObject.price}`);
+}
+
+handleObject(user)
