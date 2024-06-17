@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AsyncJs</title>
+  </head>
+  <body style="background-color: #212121; color: whitesmoke">
+    <h1>code with ax.rut</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayAshrut = () => {
+      console.log("Ashrut");
+    };
+
+    const changeText = () => {
+      document.querySelector("h1").innerHTML = "ax.rut";
+    };
+
+    const h1changer = setTimeout(changeText, 2000);
+    const nameDisplay = setTimeout(sayAshrut, 2000);
+
+    btn = document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(h1changer);
+      console.log("Stopped");
+    });
+  </script>
+</html>
