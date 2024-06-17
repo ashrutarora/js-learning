@@ -1,0 +1,90 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #1e1e1e; /* Slightly lighter dark background for container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.todo-list {
+    margin-right: 20px;
+}
+
+.todo-list h3 {
+    margin-top: 0;
+}
+
+#new-task {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #2b2b2b; /* Dark input background */
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+#add-task {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tasks li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #333; /* Dark background for tasks */
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.delete-task {
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+.timetable {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #1e1e1e; /* Dark background for table */
+    color: #e0e0e0;
+}
+
+th, td {
+    border: 1px solid #555; /* Darker borders */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333; /* Dark header background */
+    color: white;
+}
