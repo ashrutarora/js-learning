@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval</title>
+  </head>
+  <body style="background-color: #212121; color: whitesmoke">
+    <h1>code with ax.rut</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = (str) => {
+      console.log(str);
+    };
+
+    let dateInterval; // Declare dateInterval in the higher scope
+
+    const startBtn = document
+      .querySelector("#start")
+      .addEventListener("click", () => {
+        dateInterval = setInterval(sayDate, 1000, "slothPubg");
+      });
+
+    const stopBtn = document
+      .querySelector("#stop")
+      .addEventListener("click", () => {
+        clearInterval(dateInterval);
+      });
+  </script>
+</html>
