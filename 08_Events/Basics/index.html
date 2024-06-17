@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body style="background-color: #414141; color: whitesmoke">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // 1) Inject the code in HTML (Not recommended for Scaling)
+
+    // 2) Use the same onclick in JS (Not the most optimal way)
+    // document.getElementById('owl').onclick = ()=> {
+    //     alert("OWL CLICK")
+    // }
+
+    // 3) event listeners
+    // Type, timestamps, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // What is event propogation -->
+    // event bubbling(false) - bottom to up (Owl -> Ul)
+    // event capturing(true) - top to down (Ul -> Owl)
+
+    document.getElementById("images").addEventListener(
+      "click",
+      (e) => {
+        console.log("Clicked an image");
+        console.log(e.target.tagName);
+
+        // Approach 1
+
+        if (e.target.tagName === "IMG") {
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+        }
+        // Approach 2
+        // removeIt.parentNode.removeChild(removeIt)
+      },
+      false
+    );
+
+    document.getElementById("owl").addEventListener(
+      "click",
+      (e) => {
+        console.log("Owl Clicked");
+      },
+      false
+    );
+
+    document.getElementById("google").addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Google clicked");
+      e.stopImmediatePropagation();
+    });
+
+    // 4) attachEvent()
+    // 5) jQuery
+  </script>
+</html>
